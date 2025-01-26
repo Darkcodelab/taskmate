@@ -3,3 +3,7 @@
 option {
   background: black;
 }
+
+button {
+  cursor: pointer;
+}

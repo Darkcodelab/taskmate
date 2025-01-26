@@ -20,7 +20,11 @@ export default function TaskItem({ task }: { task: Task }) {
   };
 
   return (
-    <li className="bg-white/5 p-4 rounded-md flex items-center justify-between">
+    <li
+      className={`bg-white/5 p-4 rounded-md flex items-center justify-between ${
+        task.completed && "opacity-50"
+      }`}
+    >
       <div>
         <h3 className={`${task.completed ? "line-through" : "no-underline"}`}>
           {task.title}

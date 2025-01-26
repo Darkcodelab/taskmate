@@ -11,7 +11,7 @@ import { TaskProvider } from "@/context/task/context";
 export default function Home() {
   return (
     <TaskProvider>
-      <main className="bg-gray-900 h-screen text-white dark:text-white">
+      <main className="bg-gray-900 min-h-screen text-white dark:text-white">
         <Header />
         <Banner />
         <AddTaskForm />

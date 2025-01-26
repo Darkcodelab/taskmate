@@ -16,7 +16,7 @@ export default function TaskFilter() {
   };
 
   return (
-    <section className="mt-10 max-w-[800px] mx-auto">
+    <section className="mt-10 max-w-[800px] mx-auto p-2">
       <select
         onChange={handleFilterChange}
         className="bg-white/5 p-2 rounded-md outline-none cursor-pointer"

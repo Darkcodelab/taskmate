@@ -35,7 +35,7 @@ export default function AddTaskForm() {
   };
 
   return (
-    <section className="mt-10">
+    <section className="mt-10 p-2">
       <form onSubmit={handleFormSubmit}>
         <div className="max-w-[800px] mx-auto bg-white/5 px-4 rounded-md flex items-center">
           <input

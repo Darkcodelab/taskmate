@@ -18,13 +18,25 @@ export default function TaskList() {
     }
   };
 
+  const filteredTasks =
+    state.filter === "all" ? state.tasks : state.tasks.filter(filterTasks);
+
+  if (filteredTasks.length === 0) {
+    return (
+      <section className="mt-5 p-2">
+        <ul className="max-w-[800px] mx-auto space-y-2">
+          <h2 className="text-center text-3xl opacity-40 mt-4">
+            No Tasks found...
+          </h2>
+        </ul>
+      </section>
+    );
+  }
+
   return (
-    <section className="mt-5">
+    <section className="mt-5 p-2">
       <ul className="max-w-[800px] mx-auto space-y-2">
-        {(state.filter === "all"
-          ? state.tasks
-          : state.tasks.filter(filterTasks)
-        ).map((task: Task) => {
+        {filteredTasks.map((task: Task) => {
           return <TaskItem key={task.id} task={task} />;
         })}
       </ul>
